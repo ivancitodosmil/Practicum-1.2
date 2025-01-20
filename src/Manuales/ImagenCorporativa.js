@@ -143,7 +143,7 @@ function ImagenCorporativa() {
             <main>
                 {/* Contenedor principal */}
                 <div className="content-container">
-                    <h2>Manuales y Reglamentos</h2>
+                    <h2>Imagen Corporativa</h2>
                     <div className="cards-row">
                         <div className="card">
                             <img src="../img/manual_imagen.jpg" alt="PDF Preview Manual de Imagen" />
