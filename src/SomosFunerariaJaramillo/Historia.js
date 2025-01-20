@@ -103,9 +103,17 @@ function Historia() {
                 <button className="dropdown-btn">Manuales</button>
                 {activeMenu === 'manuales' && (
                   <ul className="dropdown-menu">
-                    <li>Vinculación Laboral</li>
+                    <li>
+                      <Link to="/Manuales/Vinculacion">
+                        Vinculación Laboral
+                      </Link>
+                    </li>
                     <li>Imagen corporativa</li>
-                    <li>Solicitud vacaciones y permisos</li>
+                    <li>
+                      <Link to="/Manuales/Permisos">
+                      Solicitud vacaciones y permisos
+                      </Link>
+                    </li>
                     <li>Justificación de atrasos</li>
                     <li>Solicitud de certificados</li>
                     <li>Sueldo y pagos</li>

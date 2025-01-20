@@ -101,9 +101,17 @@ function Organigrama() {
                                 <button className="dropdown-btn">Manuales</button>
                                 {activeMenu === 'manuales' && (
                                     <ul className="dropdown-menu">
-                                        <li>Vinculación Laboral</li>
+                                        <li>
+                                            <Link to="/Manuales/Vinculacion">
+                                                Vinculación Laboral
+                                            </Link>
+                                        </li>
                                         <li>Imagen corporativa</li>
-                                        <li>Solicitud vacaciones y permisos</li>
+                                        <li>
+                                            <Link to="/Manuales/Permisos">
+                                                Solicitud vacaciones y permisos
+                                            </Link>
+                                        </li>
                                         <li>Justificación de atrasos</li>
                                         <li>Solicitud de certificados</li>
                                         <li>Sueldo y pagos</li>
@@ -160,10 +168,23 @@ function Organigrama() {
 
             <main>
                 <div className="contenido-principal">
-                    <h2>Organigrama de la Funeraria Jaramillo</h2>
-                    <img src="../img/organigrama.png" alt="Organigrama de la Funeraria Jaramillo" />
+                    <div className="seccion">
+                        <h2>Organigrama de la Funeraria Jaramillo</h2>
+                        <div className="scroll-container">
+                            <img src="../img/organigrama1.png" alt="Organigrama de la Funeraria Jaramillo" />
+                        </div>
+                    </div>
+                    <div className="seccion">
+                        <h2>Organigrama de la Previsión Exequial la Esperanza</h2>
+                        <div className="scroll-container">
+                            <img src="../img/organigrama.png" alt="Organigrama de la Previsión Exequial la Esperanza" />
+                        </div>
+                    </div>
+
                 </div>
             </main>
+
+
 
         </div>
     );

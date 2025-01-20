@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Productos.css';
+import './Permisos.css';
 
-function Productos() {
+function Permisos() {
     const [activeMenu, setActiveMenu] = useState(null);
 
     const toggleMenu = (menu) => {
@@ -14,7 +14,7 @@ function Productos() {
     };
 
     return (
-        <div className="productos">
+        <div className="permisos-page">
             <header>
                 <nav className="navbar">
                     <div className="logo">
@@ -29,36 +29,14 @@ function Productos() {
                                 onMouseLeave={closeMenu}
                                 className={activeMenu === 'somos' ? 'active' : ''}
                             >
-                                <button className="dropdown-btn">
-                                    Somos Funeraria Jaramillo
-                                </button>
+                                <button className="dropdown-btn">Somos Funeraria Jaramillo</button>
                                 {activeMenu === 'somos' && (
                                     <ul className="dropdown-menu">
-                                        <li>
-                                            <Link to="/SomosFunerariaJaramillo/Historia">
-                                                Historia de la empresa
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/SomosFunerariaJaramillo/Objetivos">
-                                                Objetivos y Valores institucionales
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/SomosFunerariaJaramillo/DepartamentosMision">
-                                                Departamentos (misión)
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/SomosFunerariaJaramillo/Organigrama">
-                                                Organigrama
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/SomosFunerariaJaramillo/Productos">
-                                                Productos y Servicios
-                                            </Link>
-                                        </li>
+                                        <li><Link to="/SomosFunerariaJaramillo/Historia">Historia de la empresa</Link></li>
+                                        <li><Link to="/SomosFunerariaJaramillo/Objetivos">Objetivos y Valores institucionales</Link></li>
+                                        <li><Link to="/SomosFunerariaJaramillo/DepartamentosMision">Departamentos (misión)</Link></li>
+                                        <li><Link to="/SomosFunerariaJaramillo/Organigrama">Organigrama</Link></li>
+                                        <li><Link to="/SomosFunerariaJaramillo/Productos">Productos y Servicios</Link></li>
                                     </ul>
                                 )}
                             </li>
@@ -67,16 +45,10 @@ function Productos() {
                                 onMouseLeave={closeMenu}
                                 className={activeMenu === 'formacion' ? 'active' : ''}
                             >
-                                <button className="dropdown-btn">
-                                    Formación y Capacitación
-                                </button>
+                                <button className="dropdown-btn">Formación y Capacitación</button>
                                 {activeMenu === 'formacion' && (
                                     <ul className="dropdown-menu">
-                                        <li>
-                                            <Link to="/Cursos/Ofertas">
-                                                Ofertas
-                                            </Link>
-                                        </li>
+                                        <li><Link to="/Cursos/Ofertas">Ofertas</Link></li>
                                         <li>Políticas</li>
                                         <li>Éxitos profesionales</li>
                                     </ul>
@@ -109,11 +81,7 @@ function Productos() {
                                             </Link>
                                         </li>
                                         <li>Imagen corporativa</li>
-                                        <li>
-                                            <Link to="/Manuales/Permisos">
-                                                Solicitud vacaciones y permisos
-                                            </Link>
-                                        </li>
+                                        <li>Solicitud vacaciones y permisos</li>
                                         <li>Justificación de atrasos</li>
                                         <li>Solicitud de certificados</li>
                                         <li>Sueldo y pagos</li>
@@ -169,38 +137,29 @@ function Productos() {
             </header>
 
             <main>
-                <div className="contenido-principal">
-                    <h2>Productos y Servicios Funerarios</h2>
-
-                    <div className="Presentacion">
-                        <h4>Nuestra empresa se basa en ofrecer servicios exequiales de calidad, brindando apoyo y acompañamiento a las familias en momentos difíciles con respeto y profesionalismo.</h4>
+                {/* Contenedor principal */}
+                <div className="content-container">
+                    <h2>Permisos</h2>
+                    <div className="cards-row">
+                        <div className="card">
+                            <img src="../img/permiso.jpg" alt="PDF Preview 1" />
+                            <div className="card-content">
+                                <h3>Permisos sin Cargo Vacaciones</h3>
+                                <a href="/pdfs/PermisosSinCargoVacaciones.pdf" target="_blank" rel="noopener noreferrer">Visualizar y Descargar</a>
+                            </div>
+                        </div>
+                        <div className="card">
+                            <img src="../img/permiso2.jpg" alt="PDF Preview 2" />
+                            <div className="card-content">
+                                <h3>Validación de Certificados Médicos</h3>
+                                <a href="/pdfs/ValidacionCertificadosMedicos.pdf" target="_blank" rel="noopener noreferrer">Visualizar y Descargar</a>
+                            </div>
+                        </div>
                     </div>
-
-                    <div className="tarjeta">
-                        <img src="../img/personas.png" alt="Planes a Futuro para Personas" />
-                        <p>En nuestra funeraria ofrecemos planes diseñados para el futuro de las personas, brindando tranquilidad a sus seres queridos con un servicio respetuoso, cálido y dedicado, asegurando atención personalizada en momentos difíciles.</p>
-                    </div>
-
-                    <div className="tarjeta">
-                        <img src="../img/planesMascotas.png" alt="Planes a Futuro para Mascotas" />
-                        <p>En nuestra funeraria también ofrecemos planes para el cuidado y descanso de tus mascotas, brindando tranquilidad a las familias con un servicio respetuoso y personalizado, garantizando una atención especial en momentos de despedida.</p>
-                    </div>
-
-                    <div className="tarjeta">
-                        <img src="../img/articulos.png" alt="Artículos Funerarios" />
-                        <p>La empresa dispone de una amplia variedad de artículos funerarios esenciales para cada servicio, con productos de alta calidad que cumplen con los estándares de respeto y dignidad.</p>
-                    </div>
-
-                    <div className="tarjeta">
-                        <img src="../img/flores.png" alt="Flores y Arreglos Florales" />
-                        <p>La empresa ofrece una amplia gama de flores y arreglos florales, pensados para rendir homenaje a los seres queridos, con opciones elegantes y adecuadas a cada ocasión.</p>
-                    </div>
-
                 </div>
             </main>
-
         </div>
     );
 }
 
-export default Productos;
+export default Permisos;

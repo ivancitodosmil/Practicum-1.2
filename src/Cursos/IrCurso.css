@@ -138,36 +138,89 @@
     border-radius: 5px;
     transition: width 0.5s ease;
 }
-
-/* Responsividad */
-@media (max-width: 768px) {
+/* Responsividad para laptops (pantallas entre 1024px y 1200px) */
+@media screen and (max-width: 1200px) {
     .curso-header h1 {
-        font-size: 36px; /* Título más pequeño en pantallas más pequeñas */
+        font-size: 2.5rem; /* Reduce el tamaño del título principal */
     }
-    
+    .curso-header p {
+        font-size: 1rem; /* Ajusta el tamaño del subtítulo */
+    }
     .curso-content h2 {
-        font-size: 1.8rem; /* Título más pequeño en pantallas más pequeñas */
+        font-size: 1.8rem; /* Reduce el tamaño del encabezado */
+    }
+    .curso-video video {
+        border-radius: 8px; /* Ajusta las esquinas */
+    }
+    .home-btn-primary,
+    .curso-page .home-btn-secondary,
+    .mark-progress-btn {
+        font-size: 0.95rem; /* Reduce el tamaño de los botones */
+        padding: 8px 16px; /* Ajusta el espacio interno */
+    }
+    .progress-bar {
+        height: 18px; /* Reduce la altura de la barra de progreso */
     }
 }
 
-@media (max-width: 480px) {
+/* Responsividad para tablets (pantallas entre 768px y 1024px) */
+@media screen and (max-width: 1024px) {
     .curso-header h1 {
-        font-size: 28px; /* Título aún más pequeño en pantallas de teléfonos */
+        font-size: 2rem; /* Título más pequeño */
     }
-
-    .home-btn-primary {
-        font-size: 0.9rem; /* Botón más pequeño en pantallas de teléfonos */
+    .curso-header p {
+        font-size: 0.9rem; /* Subtítulo más compacto */
     }
-
-    .home-btn-secondary {
-        font-size: 0.9rem; /* Botón de retroceso más pequeño en pantallas de teléfonos */
+    .curso-content h2 {
+        font-size: 1.5rem; /* Ajusta el tamaño del encabezado */
     }
-
+    .curso-video video {
+        border-radius: 6px; /* Esquinas más ligeras */
+    }
+    .home-btn-primary,
+    .curso-page .home-btn-secondary,
     .mark-progress-btn {
-        font-size: 0.9rem; /* Botón de marcar avance más pequeño */
+        font-size: 0.9rem; /* Botones más pequeños */
+        padding: 8px 14px;
     }
-
     .progress-bar {
-        height: 15px; /* Barra de progreso más pequeña en pantallas de teléfonos */
+        height: 16px; /* Reduce aún más la altura */
+    }
+}
+
+/* Responsividad para celulares (pantallas menores o iguales a 768px) */
+@media screen and (max-width: 768px) {
+    .curso-page {
+        padding: 15px; /* Reduce el padding general */
+    }
+    .curso-header h1 {
+        font-size: 1.8rem; /* Título más compacto */
+    }
+    .curso-header p {
+        font-size: 0.85rem; /* Texto más pequeño */
+    }
+    .curso-content h2 {
+        font-size: 1.2rem; /* Tamaño reducido para encabezados */
+    }
+    .curso-video {
+        margin-bottom: 20px; /* Reduce el espacio inferior */
+    }
+    .curso-video video {
+        border-radius: 5px;
+    }
+    .home-btn-primary,
+    .curso-page .home-btn-secondary,
+    .mark-progress-btn {
+        font-size: 0.85rem; /* Botones más compactos */
+        padding: 6px 12px; /* Padding reducido */
+    }
+    .progreso h3 {
+        font-size: 1.2rem; /* Texto más pequeño en progreso */
+    }
+    .progress-bar {
+        height: 14px; /* Altura mínima */
+    }
+    .progress {
+        transition: width 0.3s ease; /* Suaviza la transición para dispositivos más lentos */
     }
 }

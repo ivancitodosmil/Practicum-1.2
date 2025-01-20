@@ -58,9 +58,9 @@ function Inicio() {
       name: 'Manuales',
       key: 'manuales',
       items: [
-        { name: 'Vinculación Laboral', link: '#' },
+        { name: 'Vinculación Laboral', link: '/Manuales/Vinculacion' },
         { name: 'Imagen corporativa', link: '#' },
-        { name: 'Solicitud vacaciones y permisos', link: '#' },
+        { name: 'Solicitud vacaciones y permisos', link: '/Manuales/Permisos' },
         { name: 'Justificación de atrasos', link: '#' },
         { name: 'Solicitud de certificados', link: '#' },
         { name: 'Sueldo y pagos', link: '#' },

@@ -215,21 +215,93 @@
     background: #28a745;
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
+/* Estilos para laptops (pantallas anchas pero menores a desktop completo) */
+@media screen and (max-width: 1200px) {
+    .home-page {
+        padding: 15px; /* Reduce el padding general */
+    }
     .home-page .home-header h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Reduce el tamaño del título principal */
     }
-
     .home-page .home-header p {
-        font-size: 1rem;
+        font-size: 1rem; /* Ajusta el tamaño del subtítulo */
     }
-
     .home-page .home-courses-progress {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta las columnas */
+        gap: 15px; /* Reduce el espacio entre tarjetas */
     }
+    .home-page .home-progress-card {
+        padding: 15px; /* Ajusta el padding interno */
+    }
+}
 
+/* Estilos para tablets (ancho entre 768px y 1024px) */
+@media screen and (max-width: 1024px) {
+    .home-page {
+        padding: 10px; /* Menor espacio general */
+    }
+    .home-page .home-header h1 {
+        font-size: 1.8rem; /* Reduce aún más el título principal */
+    }
+    .home-page .home-header p {
+        font-size: 0.95rem; /* Ajusta el tamaño del subtítulo */
+    }
+    .home-page .home-courses-progress {
+        grid-template-columns: 1fr 1fr; /* Solo dos tarjetas por fila */
+        gap: 10px; /* Espacio reducido */
+    }
+    .home-page .home-progress-card {
+        padding: 10px; /* Ajusta el espacio interno */
+    }
     .home-page .course-image {
-        height: 150px;
+        height: 150px; /* Reduce la altura de las imágenes */
+    }
+    .home-page .home-progress-card h3 {
+        font-size: 1.2rem; /* Ajusta el tamaño de los títulos de las tarjetas */
+    }
+}
+
+/* Estilos para celulares (ancho menor o igual a 768px) */
+@media screen and (max-width: 768px) {
+    .home-page {
+        padding: 10px;
+    }
+    .home-page .home-header h1 {
+        font-size: 1.5rem; /* Título compacto */
+    }
+    .home-page .home-header p {
+        font-size: 0.9rem; /* Texto más pequeño */
+    }
+    .home-page .home-courses-progress {
+        grid-template-columns: 1fr; /* Una tarjeta por fila */
+        gap: 10px; /* Espacio mínimo entre tarjetas */
+    }
+    .home-page .home-progress-card {
+        padding: 10px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
+    }
+    .home-page .course-image {
+        height: 120px; /* Imágenes más compactas */
+    }
+    .home-page .home-progress-card h3 {
+        font-size: 1rem; /* Texto más pequeño */
+    }
+    .home-page .home-progress-card p {
+        font-size: 0.8rem;
+    }
+    .home-page .home-btn-primary,
+    .home-page .home-btn-danger {
+        font-size: 0.85rem; /* Botones más pequeños */
+        padding: 8px 10px; /* Padding reducido */
+    }
+    .home-page .evaluation-item {
+        flex-direction: column; /* Coloca el contenido en columna */
+        align-items: flex-start; /* Alinea el texto al inicio */
+    }
+    .home-page .evaluation-item h3 {
+        font-size: 1rem; /* Reduce el tamaño del texto */
+    }
+    .home-page .evaluation-item p {
+        font-size: 0.8rem;
     }
 }

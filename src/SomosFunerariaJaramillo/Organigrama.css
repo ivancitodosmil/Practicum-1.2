@@ -1,71 +1,74 @@
-/* Estilo general para la página del organigrama */
+/* General para el componente Organigrama */
+.organigrama {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
 .organigrama .contenido-principal {
-    display: block; /* Permite que el contenido se ajuste naturalmente */
-    overflow-x: auto; /* Habilita barras de desplazamiento horizontal */
-    overflow-y: hidden; /* Evita barras de desplazamiento vertical innecesarias */
-    width: 100vw; /* Ocupa todo el ancho de la ventana */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    text-align: center; /* Alineamos el texto al centro */
-    padding: 20px; /* Espaciado interno */
-    white-space: nowrap; /* Impide que el contenido se ajuste a la línea */
+    margin-top: -15px; /* Espacio debajo del menú */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
 }
 
-/* Título principal */
-.organigrama .contenido-principal h2 {
-    font-family: 'Playfair Display', serif; /* Fuente del título */
-    font-weight: 900; /* Negrita */
-    font-style: italic; /* Cursiva */
-    font-size: 2.5rem; /* Tamaño del texto */
-    color: #062140; /* Color del texto */
-    margin-bottom: 20px; /* Espaciado inferior */
-    margin-top: 5px; /* Espaciado superior */
+.organigrama .seccion {
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-/* Contenedor para la imagen principal */
-.organigrama .contenido-principal .imagen-contenedor {
-    display: inline-block; /* Asegura que la imagen se alinee en una línea horizontal */
-    position: relative; /* Posicionamiento relativo */
-    text-align: center; /* Alineación central */
-    width: max-content; /* Ajusta el tamaño al contenido */
-    height: 100%; /* Altura del contenedor */
-    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+.organigrama .seccion h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2.5rem;
+    color: #062140;
+    margin-bottom: 20px;
 }
 
-/* Imagen principal */
-.organigrama .contenido-principal img {
-    max-width: none; /* Permite que la imagen sea más grande que el contenedor */
-    max-height: none; /* Evita limitar la altura */
-    display: inline-block; /* Evita que la imagen ocupe toda la línea */
-    margin: 0; /* Elimina márgenes de la imagen */
-    transition: transform 0.5s ease; /* Agrega una transición suave para el movimiento */
+/* Contenedor para las imágenes */
+.organigrama .seccion .scroll-container {
+    display: flex;
+    justify-content: center; /* Centra las imágenes */
+    overflow-x: auto; /* Activa el desplazamiento horizontal */
+    overflow-y: hidden; /* Evita desplazamiento vertical innecesario */
+    width: 100%; /* Mantiene el contenedor en ancho completo */
+    -webkit-overflow-scrolling: touch; /* Mejora la experiencia en dispositivos táctiles */
 }
 
-/* Responsividad */
-/* Laptops y pantallas medianas */
-@media (max-width: 1024px) {
-    .organigrama .contenido-principal h2 {
-        font-size: 2rem; /* Reducimos el tamaño del título */
-    }
-
-    .organigrama .contenido-principal {
-        padding: 15px; /* Menor espacio interno */
-    }
+.organigrama .seccion img {
+    width: auto; /* Mantiene su ancho original */
+    max-width: 100%; /* Limita el ancho en pantallas grandes */
+    height: auto; /* Mantiene proporciones */
+    border: 2px solid #ccc; /* Opcional: borde */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación */
 }
 
-/* Tablets y pantallas pequeñas */
+/* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
-    .organigrama .contenido-principal h2 {
-        font-size: 1.8rem; /* Ajustamos tamaño del título */
+    .organigrama .seccion h2 {
+        font-size: 2rem; /* Reduce el tamaño de los títulos */
+    }
+
+    /* Contenedor para activar desplazamiento horizontal */
+    .organigrama .seccion .scroll-container {
+        overflow-x: scroll; /* Scroll horizontal activado */
+    }
+
+    .organigrama .seccion img {
+        max-width: none; /* Desactiva la limitación del ancho */
     }
 }
 
-/* Celulares */
 @media (max-width: 480px) {
-    .organigrama .contenido-principal {
-        padding: 10px; /* Reducimos el espaciado */
-    }
-
-    .organigrama .contenido-principal h2 {
-        font-size: 1.5rem; /* Reducimos el tamaño del título */
+    .organigrama .seccion h2 {
+        font-size: 1.8rem;
     }
 }

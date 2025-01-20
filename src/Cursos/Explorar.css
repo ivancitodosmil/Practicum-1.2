@@ -114,19 +114,59 @@
     background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
+/* Estilos para laptops (pantallas anchas pero menores a desktop completo) */
+@media screen and (max-width: 1200px) {
+    .explorar-header h1 {
+        font-size: 38px; /* Reduce el tamaño del título */
+    }
     .explorar-courses {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta las columnas */
+        gap: 15px; /* Incrementa el espacio entre tarjetas */
+    }
+    .explorar-card {
+        width: 250px; /* Ajusta el ancho de las tarjetas */
+        height: 450px; /* Ajusta la altura de las tarjetas */
     }
 }
 
-@media (max-width: 480px) {
-    .explorar-courses {
-        grid-template-columns: 1fr; /* Una columna en teléfonos */
-    }
-
+/* Estilos para tablets (ancho entre 768px y 1024px) */
+@media screen and (max-width: 1024px) {
     .explorar-header h1 {
-        font-size: 24px; /* Título más pequeño en pantallas pequeñas */
+        font-size: 32px; /* Reduce el tamaño del título */
+    }
+    .explorar-courses {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Más columnas si cabe */
+        gap: 10px; /* Menos espacio entre tarjetas */
+    }
+    .explorar-card {
+        width: 220px; /* Reduce el ancho de las tarjetas */
+        height: 400px; /* Reduce la altura de las tarjetas */
+    }
+    .explorar-btn-back {
+        font-size: 14px; /* Reduce el tamaño del texto en el botón */
+        padding: 8px 16px;
+    }
+}
+
+/* Estilos para celulares (ancho menor o igual a 768px) */
+@media screen and (max-width: 768px) {
+    .explorar-header h1 {
+        font-size: 26px; /* Título más pequeño */
+    }
+    .explorar-courses {
+        grid-template-columns: 1fr; /* Una tarjeta por fila */
+        gap: 10px; /* Espacio mínimo entre tarjetas */
+    }
+    .explorar-card {
+        width: 90%; /* Ancho adaptativo */
+        height: auto; /* Altura automática */
+        padding: 20px; /* Ajusta el padding */
+    }
+    .explorar-image-container {
+        height: 100px; /* Reduce la altura de las imágenes */
+    }
+    .explorar-btn-inscribir {
+        font-size: 12px; /* Botón más pequeño */
+        padding: 6px 12px;
     }
 }

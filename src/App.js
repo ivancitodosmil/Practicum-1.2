@@ -11,6 +11,8 @@ import Home from './Cursos/Home';
 import Explorar from './Cursos/Explorar';
 import Quiz from './Cursos/Quiz';
 import IrCurso from './Cursos/IrCurso';
+import Vinculacion from './Manuales/Vinculacion';
+import Permisos from './Manuales/Permisos';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path="/Cursos/Explorar" element={<Explorar />} /> 
           <Route path="/Cursos/Quiz" element={<Quiz />} /> 
           <Route path="/Cursos/IrCurso" element={<IrCurso />} /> 
+          <Route path="/Manuales/Vinculacion" element={<Vinculacion />} /> 
+          <Route path="/Manuales/Permisos" element={<Permisos />} /> 
         </Routes>
       </div>
     </Router>

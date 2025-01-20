@@ -55,6 +55,7 @@
 .productos .contenido-principal .tarjeta:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #FFFDF0;
 }
 
 /* Imagen dentro de las tarjetas */
