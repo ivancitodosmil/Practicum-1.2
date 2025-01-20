@@ -59,11 +59,11 @@ function Inicio() {
       key: 'manuales',
       items: [
         { name: 'Vinculación Laboral', link: '/Manuales/Vinculacion' },
-        { name: 'Imagen corporativa', link: '#' },
+        { name: 'Imagen corporativa', link: '/Manuales/ImagenCorporativa' },
         { name: 'Solicitud vacaciones y permisos', link: '/Manuales/Permisos' },
         { name: 'Justificación de atrasos', link: '#' },
         { name: 'Solicitud de certificados', link: '#' },
-        { name: 'Sueldo y pagos', link: '#' },
+        { name: 'Sueldo y pagos', link: '/Manuales/Pagos' },
         { name: 'Evaluación de desempeño', link: '#' },
         { name: 'Salida Laboral', link: '#' },
       ],
@@ -80,7 +80,7 @@ function Inicio() {
       name: 'Cultura organizacional',
       key: 'cultura',
       items: [
-        { name: 'Beneficios para colaboradores', link: '#' },
+        { name: 'Beneficios para colaboradores', link: '/CulturaOrganizacional/Beneficios' },
         { name: 'Reconocimientos y premiaciones', link: '#' },
         { name: 'Nuevos Talentos', link: '#' },
         { name: 'Maternidad y Paternidad', link: '#' },

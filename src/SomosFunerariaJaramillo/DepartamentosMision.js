@@ -108,7 +108,11 @@ function DepartamentosMision() {
                                                 Vinculación Laboral
                                             </Link>
                                         </li>
-                                        <li>Imagen corporativa</li>
+                                        <li>
+                                            <Link to="/Manuales/ImagenCorporativa">
+                                                Imagen corporativa
+                                            </Link>
+                                        </li>
                                         <li>
                                             <Link to="/Manuales/Permisos">
                                                 Solicitud vacaciones y permisos
@@ -116,7 +120,11 @@ function DepartamentosMision() {
                                         </li>
                                         <li>Justificación de atrasos</li>
                                         <li>Solicitud de certificados</li>
-                                        <li>Sueldo y pagos</li>
+                                        <li>
+                                            <Link to="/Manuales/Pagos">
+                                                Sueldo y pagos
+                                            </Link>
+                                        </li>
                                         <li>Evaluación de desempeño</li>
                                         <li>Salida Laboral</li>
                                     </ul>
@@ -143,10 +151,14 @@ function DepartamentosMision() {
                                 <button className="dropdown-btn">Cultura organizacional</button>
                                 {activeMenu === 'cultura' && (
                                     <ul className="dropdown-menu">
-                                        <li>Beneficios para colaboradores</li>
+                                        <li>
+                                            <Link to="/CulturaOrganizacional/Beneficios">
+                                            Beneficios para colaboradores
+                                            </Link>
+                                        </li>
                                         <li>Reconocimientos y premiaciones</li>
                                         <li>Nuevos Talentos</li>
-                                        <li>Maternidad y Paternidad</li>
+                                        <li>Maternidad y Paternidad</li> 
                                         <li>Cumpleaños</li>
                                     </ul>
                                 )}

@@ -51,7 +51,7 @@
 }
 
 /* Imagen de la tarjeta */
-.card img {
+.permisos-page .card img {
     margin-top: 10px;
     width: 200px;
     height: 250px;

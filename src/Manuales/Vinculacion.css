@@ -6,7 +6,7 @@
 }
 
 /* Contenedor del título y las tarjetas */
-.content-container {
+.vinculacion-page .content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,7 @@
 }
 
 /* Estilo del título */
-.content-container h2 {
+.vinculacion-page .content-container h2 {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
     font-style: italic;
@@ -25,7 +25,7 @@
 }
 
 /* Contenedor de las tarjetas en fila */
-.cards-row {
+.vinculacion-page .cards-row {
     display: flex;
     justify-content: center;
     gap: 20px; /* Espaciado entre las tarjetas */
@@ -34,7 +34,7 @@
 }
 
 /* Tarjetas individuales */
-.card {
+.vinculacion-page .card {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -45,31 +45,31 @@
     width: 300px; /* Tamaño fijo de las tarjetas */
 }
 
-.card:hover {
+.vinculacion-page .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Imagen de la tarjeta */
-.card img {
-    margin-top: 10px;
-    max-width: 150px;
-    max-height: 220px;
+.vinculacion-page .card img {
+    margin-top: 5px;
+    max-width: 250px;
+    max-height: 250px;
     object-fit: cover;
 }
 
 /* Contenido de la tarjeta */
-.card-content {
+.vinculacion-page .card-content {
     padding: 10px;
 }
 
-.card-content h3 {
+.vinculacion-page .card-content h3 {
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 10px;
 }
 
-.card-content a {
+.vinculacion-page .card-content a {
     display: inline-block;
     padding: 10px 20px;
     color: #fff;
@@ -80,7 +80,7 @@
     transition: background-color 0.3s;
 }
 
-.card-content a:hover {
+.vinculacion-page .card-content a:hover {
     background-color: #0056b3;
 }
 

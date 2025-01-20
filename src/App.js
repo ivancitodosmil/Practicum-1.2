@@ -13,6 +13,9 @@ import Quiz from './Cursos/Quiz';
 import IrCurso from './Cursos/IrCurso';
 import Vinculacion from './Manuales/Vinculacion';
 import Permisos from './Manuales/Permisos';
+import Pagos from './Manuales/Pagos';
+import ImagenCorporativa from './Manuales/ImagenCorporativa';
+import Beneficios from './CulturaOrganizacional/Beneficios';
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
           <Route path="/Cursos/IrCurso" element={<IrCurso />} /> 
           <Route path="/Manuales/Vinculacion" element={<Vinculacion />} /> 
           <Route path="/Manuales/Permisos" element={<Permisos />} /> 
+          <Route path="/Manuales/Pagos" element={<Pagos />} /> 
+          <Route path="/Manuales/ImagenCorporativa" element={<ImagenCorporativa />} /> 
+          <Route path="/CulturaOrganizacional/Beneficios" element={<Beneficios />} /> 
         </Routes>
       </div>
     </Router>
