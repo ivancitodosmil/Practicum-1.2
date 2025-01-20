@@ -1,0 +1,71 @@
+/* Estilo general para la página del organigrama */
+.organigrama .contenido-principal {
+    display: block; /* Permite que el contenido se ajuste naturalmente */
+    overflow-x: auto; /* Habilita barras de desplazamiento horizontal */
+    overflow-y: hidden; /* Evita barras de desplazamiento vertical innecesarias */
+    width: 100vw; /* Ocupa todo el ancho de la ventana */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    text-align: center; /* Alineamos el texto al centro */
+    padding: 20px; /* Espaciado interno */
+    white-space: nowrap; /* Impide que el contenido se ajuste a la línea */
+}
+
+/* Título principal */
+.organigrama .contenido-principal h2 {
+    font-family: 'Playfair Display', serif; /* Fuente del título */
+    font-weight: 900; /* Negrita */
+    font-style: italic; /* Cursiva */
+    font-size: 2.5rem; /* Tamaño del texto */
+    color: #062140; /* Color del texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+    margin-top: 5px; /* Espaciado superior */
+}
+
+/* Contenedor para la imagen principal */
+.organigrama .contenido-principal .imagen-contenedor {
+    display: inline-block; /* Asegura que la imagen se alinee en una línea horizontal */
+    position: relative; /* Posicionamiento relativo */
+    text-align: center; /* Alineación central */
+    width: max-content; /* Ajusta el tamaño al contenido */
+    height: 100%; /* Altura del contenedor */
+    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+}
+
+/* Imagen principal */
+.organigrama .contenido-principal img {
+    max-width: none; /* Permite que la imagen sea más grande que el contenedor */
+    max-height: none; /* Evita limitar la altura */
+    display: inline-block; /* Evita que la imagen ocupe toda la línea */
+    margin: 0; /* Elimina márgenes de la imagen */
+    transition: transform 0.5s ease; /* Agrega una transición suave para el movimiento */
+}
+
+/* Responsividad */
+/* Laptops y pantallas medianas */
+@media (max-width: 1024px) {
+    .organigrama .contenido-principal h2 {
+        font-size: 2rem; /* Reducimos el tamaño del título */
+    }
+
+    .organigrama .contenido-principal {
+        padding: 15px; /* Menor espacio interno */
+    }
+}
+
+/* Tablets y pantallas pequeñas */
+@media (max-width: 768px) {
+    .organigrama .contenido-principal h2 {
+        font-size: 1.8rem; /* Ajustamos tamaño del título */
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .organigrama .contenido-principal {
+        padding: 10px; /* Reducimos el espaciado */
+    }
+
+    .organigrama .contenido-principal h2 {
+        font-size: 1.5rem; /* Reducimos el tamaño del título */
+    }
+}
